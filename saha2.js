@@ -1,14 +1,14 @@
 module.exports = async function(context, commands) {
   // we fetch the selenium webdriver from context
   await commands.navigate(
-    'http://beta.piana.in/sahapedia2.0/backend/users/login'
+    'http://abcd.com/backend/users/login'
   );
 
   const webdriver = context.selenium.webdriver;
   const driver = context.selenium.driver;
   // before you start, make your username and password
-  const userName = 'user@piana.in';
-  const password = 'user@123';
+  const userName = 'username';
+  const password = 'pwd';
   //const loginForm = await driver.findElement(webdriver.By.css('form'));
   const loginInput = await driver.findElement(webdriver.By.id('fullname'));
   await loginInput.sendKeys(userName);
